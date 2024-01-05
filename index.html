@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="shortcut icon"
+			href="img/favicon.ico"
+		/>
+		<title>Створення та розробка сайтів Львів - веб-студія REDSTONE</title>
+		<link
+			rel="stylesheet"
+			href="css/main.css"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<div class="header">
+				<div class="logo-block">
+					<div
+						class="logo change-logo"
+						data-dark-logo="img/logo.svg"
+						data-light-logo="img/logo_white.svg"
+					>
+						<a href="../">
+							<img
+								src="img/logo.svg"
+								alt="Створення сайтів Львів"
+							/>
+						</a>
+					</div>
+					<button
+						type="button"
+						class="menu-toggle"
+						onclick="toggleMenu()"
+					>
+						<span class="menu-icon"><i></i></span>
+						<em class="menu-text">меню</em>
+						<em class="close-text">закрити</em>
+					</button>
+				</div>
+				<nav class="primary-nav d-none d-xl-block">
+					<ul class="primary-nav__list">
+						<li class="primary-nav__item">
+							<a
+								href="../portfolio"
+								class="primary-nav__link"
+								>Портфоліо</a
+							>
+						</li>
+						<li class="primary-nav__item primary-nav__item--has-children">
+							<span class="primary-nav__link">Послуги<i></i></span>
+							<span class="arrow-4-left"></span>
+							<span class="arrow-4-right"></span>
+							<ul class="primary-nav__sublist">
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-stvorennya-saytiv"
+										class="primary-nav__sublink"
+										>Створення сайтів</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-brending-ta-dyzajn"
+										class="primary-nav__sublink"
+										>Брендинг та дизайн</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-crm-sistemi"
+										class="primary-nav__sublink"
+										>CRM системи</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-internet-magazyn"
+										class="primary-nav__sublink"
+										>Інтернет магазин</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-landing-page"
+										class="primary-nav__sublink"
+										>Лендінг</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-pidtrymka-sajtu"
+										class="primary-nav__sublink"
+										>Підтримка сайту</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-redyzajn"
+										class="primary-nav__sublink"
+										>Редизайн</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-rozrobka-dodatkiv"
+										class="primary-nav__sublink"
+										>Розробка додатків</a
+									>
+								</li>
+								<li class="primary-nav__subitem">
+									<a
+										href="https://redstone.media/servis-poshukova-optymizatsiia"
+										class="primary-nav__sublink"
+										>Пошукова оптимізація</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="primary-nav__item">
+							<a
+								href="../brendbuky"
+								class="primary-nav__link"
+								>Брендинг</a
+							>
+						</li>
+						<li class="primary-nav__item">
+							<span class="primary-nav__link scroll-to-contacts open-menu"
+								>Контакти</span
+							>
+						</li>
+					</ul>
+				</nav>
+				<div class="header-right d-none d-xl-flex">
+					<a
+						href="tel:+380676075784"
+						class="phone-number type-1"
+						target="_blank"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 20 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M16.5453 0V-0.1H16.4453H3.55469H3.45469V0V20V20.1H3.55469H16.4453H16.5453V20V0ZM15.1734 18.7281H4.82656V1.27188H15.1734V18.7281Z"
+								stroke-width="0.2"
+							></path>
+							<path d="M8 15H12V17H8V15Z"></path>
+						</svg>
+						+38 067 607 57 84
+					</a>
+					<button
+						type="button"
+						class="btn open-popup"
+						onclick="openpopupeMenu()"
+					>
+						Задати запитання
+					</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero-section">
+				<div class="hero-container">
+					<div class="hero-row">
+						<div class="hero-col left">
+							<div class="title">
+								Сайти <b>.</b> Арр <b>.</b> Брендинг - Робимо складне простим
+							</div>
+							<a
+								href="../portfolio"
+								class="btn invert"
+								>НАШІ РОБОТИ</a
+							>
+							<div class="logo-group">
+								<div class="logo-item">
+									<a
+										href="https://clutch.co/profile/redstone"
+										target="_blank"
+										rel="nofollow"
+										><img
+											src="./img/clutchco.svg"
+											data-i-src="./img/clutchco.svg"
+											alt=""
+											class="imgLoaded" /></a
+									><a
+										href="https://www.awwwards.com/REDSTONE/"
+										target="_blank"
+										rel="nofollow"
+										><img
+											src="./img/green-awwwards.svg"
+											data-i-src="./img/green-awwwards.svg"
+											alt=""
+											class="imgLoaded" /></a
+									><a
+										href="https://it-rating.ua/rating-webstudio-lvov-2020"
+										target="_blank"
+										rel="nofollow"
+										><img
+											src="./img/itr_logo.svg"
+											data-i-src="./img/itr_logo.svg"
+											alt=""
+											class="imgLoaded" /></a
+									><a href="../nagorody"
+										><img
+											src="./img/other.svg"
+											data-i-src="./img/other.svg"
+											alt=""
+											class="imgLoaded"
+									/></a>
+								</div>
+							</div>
+						</div>
+						<div class="hero-col right">
+							<div class="counter-block">
+								<div class="svg-wrapper animated type-2">
+									<svg
+										version="1.1"
+										viewBox="0 0 100 100"
+										width="100%"
+										height="100%"
+										preserveAspectRatio="xMidYMid meet"
+									>
+										<text
+											x="50%"
+											y="97%"
+											text-anchor="middle"
+											class="text-bold"
+											id="counter-text"
+										>
+											18
+										</text>
+									</svg>
+								</div>
+							</div>
+							<div class="sub-title text-center">
+								<span class="d-xl-none">18</span> Років переносимо ваш бізнес
+								online
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="category-section">
+				<div class="container">
+					<div class="container-box">
+						<h2 class="container-box__title">
+							Ефектні та ефективні веб і мобайл рішення із зануренням у ваш
+							бізнес
+						</h2>
+						<p class="container-box__text">
+							Ми знаємо болі у Вашій ніші! У нашому арсеналі є всі інструменти
+							для їх вирішення:
+						</p>
+					</div>
+					<div class="category-section__container">
+						<ul class="category-section__list">
+							<li class="category-section__item">
+								<a
+									href="https://redstone.media/sajt-dostavka-yizhi"
+									target="_blank"
+									><article class="category-card">
+										<img
+											class="category-card__image"
+											src="./img/redstone-food-delivery.png"
+											alt="Handlebar category"
+										/>
+										<h3
+											class="category-card__title"
+											lang="en"
+										>
+											ДОСТАВКА ЇЖІ
+										</h3>
+										<div class="category-card__text">
+											<p>
+												Для ефективної роботи наш мозок потребує не лише
+												равильного відпочинку, але й повноцінного харчування.
+											</p>
+											<p>
+												Ходити за покупками в магазини зовсім необов'язково.
+											</p>
+										</div>
+									</article></a
+								>
+							</li>
+							<li class="category-section__item">
+								<a
+									href="https://redstone.media/budivelni-kompaniyi-neruhomist"
+									target="_blank"
+									><article class="category-card">
+										<img
+											class="category-card__image"
+											src="./img/category-img-6.png"
+											alt="Handlebar category"
+										/>
+										<h3
+											class="category-card__title"
+											lang="en"
+										>
+											Будівництво
+										</h3>
+										<div class="category-card__text">
+											<p>
+												СТВОРЕННЯ САЙТІВ ДЛЯ: ЖИТЛОВИХ КОМПЛЕКСІВ, БУДІВЕЛЬНИХ
+												КОМПАНІЙ.
+											</p>
+											<p>
+												Будь-який веб проект про надання того чи іншого виду
+												послуг розробляється з метою реклами, як самої компанії,
+												так і безпосередньо сфери її діяльності.
+											</p>
+										</div>
+									</article></a
+								>
+							</li>
+							<li class="category-section__item">
+								<a
+									href="https://redstone.media/stvorennja-mobilnih-dodatkiv"
+									target="_blank"
+									><article class="category-card">
+										<img
+											class="category-card__image"
+											src="./img/category-img-5.png"
+											alt="Handlebar category"
+										/>
+										<h3
+											class="category-card__title"
+											lang="en"
+										>
+											APP
+										</h3>
+										<div class="category-card__text">
+											<p>
+												МОБІЛЬНИЙ ДОДАТОК - ЦИФРОВЕ ПРОДОВЖЕННЯ ВАШОГО БІЗНЕСУ
+											</p>
+											<p>
+												Кожна успішна компанія, окрім залучення нових клієнтів,
+												повинна дбати і про вже існуючих. Оскільки конкуренція
+												на ринку постійно зростає
+											</p>
+										</div>
+									</article></a
+								>
+							</li>
+							<li class="category-section__item">
+								<a
+									href="https://redstone.media/websolution"
+									target="_blank"
+									><article class="category-card">
+										<img
+											class="category-card__image"
+											src="./img/category-img-8.webp"
+											alt="Handlebar category"
+										/>
+										<h3
+											class="category-card__title"
+											lang="en"
+										>
+											WEB SOLUTION
+										</h3>
+										<div class="category-card__text">
+											<p>
+												Створюємо проекти будь якої складності за процесом: опис
+												технічного завдання, створення дата моделі, промалювання
+												шляху користувача, написання тест кейсів
+											</p>
+										</div>
+									</article></a
+								>
+							</li>
+							<li class="category-section__item">
+								<a
+									href="https://redstone.media/auto"
+									target="_blank"
+									><article class="category-card">
+										<img
+											class="category-card__image"
+											src="./img/redstone-auto.png"
+											alt="Handlebar category"
+										/>
+										<h3
+											class="category-card__title"
+											lang="en"
+										>
+											Авто
+										</h3>
+										<div class="category-card__text">
+											<p>
+												Компанія REDSTONE створює складні високо навантажених
+												проекти для авто брендів з повним спектром функціоналу:
+												3d інтерєр, 3d єкстреєр, склад авто, дилери, кабінет
+												дилерів, запис на сервісне обслуговування, галереї,
+												вибір кольору авто, конфігуратор опцій.
+											</p>
+										</div>
+									</article></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Popup -->
+		<div class="backdrop is-hidden">
+			<div class="popup">
+				<button
+					class="popup__btn-close popup-btn-close"
+					type="button"
+				>
+					<svg
+						width="32"
+						height="32"
+					>
+						<use href="./img/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<h2 class="popup__title">
+					Розкажіть нам про свій проект, подумаємо над ним разом. Почніть з
+					простого - просто напишіть нам
+				</h2>
+				<form
+					class="popup__form"
+					name="popup-form"
+					autocomplete="off"
+				>
+					<div class="popup__form-field">
+						<label
+							class="input__label visually-hidden"
+							for="user-name-popup"
+						>
+						</label>
+						<input
+							class="input__control"
+							type="text"
+							id="user-name-popup"
+							placeholder="Ваше ім'я"
+						/>
+						<label
+							class="input__label visually-hidden"
+							for="user-tel-popup"
+						>
+						</label>
+						<input
+							class="input__control"
+							type="tel"
+							id="user-tel-popup"
+							placeholder="Ваш телефон"
+							pattern="^\+[0-9]{12}"
+						/>
+					</div>
+					<div class="popup__form-field input">
+						<label
+							class="input__label visually-hidden"
+							for="user-email-popup"
+						>
+						</label>
+						<input
+							class="input__control"
+							type="email"
+							name="user-email"
+							id="user-email-popup"
+							placeholder="*Ваш email"
+							required
+						/>
+					</div>
+					<div class="popup__form-field">
+						<textarea
+							class="input__control"
+							name="mess"
+							placeholder="Коротко опишіть свій проект"
+						></textarea>
+					</div>
+					<button
+						class="btn invert"
+						type="submit"
+					>
+						Надіслати
+					</button>
+				</form>
+			</div>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,622 @@
+/* Reset styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-family: 'Arial', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Header styles */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 15px;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.logo-block {
+	display: flex;
+	justify-content: start;
+}
+
+.logo img {
+	max-width: 140px;
+	margin-right: 44px;
+}
+
+.menu-toggle {
+	position: relative;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.menu-toggle .menu-icon {
+	display: block;
+	width: 24px;
+	height: 14px;
+	position: relative;
+}
+
+.menu-toggle .menu-icon i {
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	position: absolute;
+	left: 0;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-toggle .menu-icon i:before,
+.menu-toggle .menu-icon i:after {
+	content: '';
+	width: 50%;
+	height: 2px;
+	background-color: currentColor;
+	position: absolute;
+	transition: transform 0.3s, background-color 0.3s, width 0.3s;
+}
+
+.menu-toggle .menu-icon i:before {
+	top: -6px;
+	left: 0;
+}
+
+.menu-toggle .menu-icon i:after {
+	bottom: -6px;
+	right: 0;
+}
+
+.menu-toggle:hover .menu-icon i,
+.menu-toggle:hover .menu-icon i:before,
+.menu-toggle:hover .menu-icon i:after,
+.menu-toggle.open-menu .menu-icon i,
+.menu-toggle.open-menu .menu-icon i:after {
+	background-color: #e70000;
+	width: 100%;
+}
+
+.menu-toggle:hover .menu-text {
+	color: #e70000;
+}
+
+.menu-toggle:hover .menu-icon i:before,
+.menu-toggle:hover .menu-icon i:after,
+.menu-toggle.open-menu .menu-icon i:before,
+.menu-toggle.open-menu .menu-icon i:after {
+	width: 100%;
+}
+
+.menu-toggle.open-menu .menu-icon i:before {
+	display: none;
+}
+
+.menu-toggle.open-menu .menu-icon i {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+.menu-toggle.open-menu .menu-icon i:after {
+	transform: rotate(-90deg);
+	bottom: 0;
+}
+
+.menu-text,
+.close-text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #232323;
+	margin-left: 10px;
+}
+
+.menu-text {
+	display: inline;
+}
+
+.close-text {
+	display: none;
+}
+
+.menu-toggle.open-menu .menu-text {
+	display: none;
+}
+
+.menu-toggle.open-menu .close-text {
+	display: inline;
+	color: #e70000;
+}
+
+/* nav */
+.primary-nav {
+	text-align: center;
+	position: relative;
+	top: 2px;
+}
+
+.primary-nav__list {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	margin: 8px 5px;
+}
+
+.primary-nav__item {
+	margin: 8px 5px;
+	cursor: pointer;
+}
+
+.primary-nav__link {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	padding: 10px 0;
+	position: relative;
+	display: inline-block;
+}
+
+.primary-nav li a i,
+.primary-nav li span i {
+	display: block;
+	border-left: 1px solid;
+	width: 6px;
+	height: 6px;
+	border-bottom: 1px solid;
+	position: absolute;
+	left: calc(100% + 5px);
+	top: 50%;
+	transform: rotate(-45deg);
+}
+
+.primary-nav__link:hover {
+	color: #e70000;
+}
+
+.primary-nav__item--has-children {
+	margin-right: 15px;
+	position: relative;
+}
+
+.primary-nav__sublist {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #f8f8f8; /* Задайте бажаний колір фону підменю */
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+	width: 260px;
+	z-index: 1;
+}
+
+.primary-nav__item--has-children:hover .primary-nav__sublist {
+	display: block;
+}
+
+.primary-nav__subitem {
+	margin: 0;
+}
+
+.primary-nav__sublink {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #333; /* Задайте бажаний колір тексту підменю */
+}
+
+.primary-nav__sublink:hover {
+	background-color: #f5f5f5; /* Задайте бажаний колір фону підменю при наведенні */
+}
+
+/* Загальні стилі для блоку header-right */
+.header-right {
+	display: flex;
+	align-items: center;
+}
+
+/* Стилі для блоку з номером телефону */
+.phone-number {
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	color: #232323;
+	text-decoration: none;
+}
+
+.phone-number:hover {
+	color: #e70000;
+}
+
+/* Стилі для іконки телефону у блоку номера */
+.phone-number svg {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+/* Стилі для кнопки "Задати запитання" */
+.btn {
+	text-transform: uppercase;
+	padding: 10px 15px;
+	font-weight: 600;
+	color: #fff;
+	border: 1px solid #e70000;
+	position: relative;
+	z-index: 1;
+	line-height: 1.6;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn::before {
+	transition: 0.4s;
+	pointer-events: none;
+}
+
+.btn::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	top: -10px;
+	background-color: #e70000;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: #e70000;
+}
+.btn:hover::before {
+	transform: translateY(100%);
+}
+.invert::before {
+	background-color: #fff;
+}
+
+.invert:hover::before {
+	transform: translateY(-100%);
+}
+
+.btn.invert {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #e70000;
+	border: 2px solid #e70000;
+	transition: 0.3s;
+}
+
+.btn.invert:hover {
+	color: #fff;
+	background-color: #e70000;
+}
+
+/* Hero section */
+.hero-section {
+	display: flex;
+	padding-top: 80px;
+	margin-bottom: 100px;
+	background-color: #f8f8f8; /* Замініть на ваш колір фону */
+	align-items: center;
+}
+
+.hero-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hero-col.left {
+	flex: 7;
+}
+
+.hero-col.right {
+	flex: 5;
+}
+
+.title {
+	font-size: 46px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.btn.invert {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #e70000;
+	border: 2px solid #e70000;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.btn.invert:hover {
+	color: #fff;
+	background-color: #e70000;
+}
+
+.logo-group a {
+	filter: grayscale(1);
+	cursor: pointer;
+}
+.logo-group a:hover {
+	filter: grayscale(0);
+}
+
+.logo-item a {
+	margin-right: 20px;
+}
+
+.logo-item a:last-child {
+	margin-right: 0;
+}
+
+.counter-block {
+	margin-bottom: 20px;
+}
+
+svg {
+	font-size: 21px;
+	color: #424242;
+	text-align: left;
+	font-weight: 900;
+	stroke: #e6e6e6;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Inter';
+}
+
+.animated.type-2 #counter-text {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	animation: drawCounter 2s ease-in-out forwards;
+}
+
+@keyframes drawCounter {
+	to {
+		stroke-dashoffset: 0;
+		fill: #f1f1f1;
+		stroke: transparent;
+	}
+}
+
+.svg-wrapper {
+	height: 335px;
+}
+
+.animated .svg-wrapper .text-bold {
+	animation: drawCounter 0.8s linear forwards 1s;
+}
+
+.animated .svg-wrapper.type-2 .text-bold {
+	animation: drawCounter 0.8s linear forwards 1s;
+}
+
+.text-bold {
+	font-size: 130px;
+	letter-spacing: -6px;
+	fill: transparent;
+}
+
+.sub-title {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 10px;
+	letter-spacing: 0.05em;
+	font-weight: 300;
+	line-height: 1.4;
+	color: #424242;
+	text-transform: uppercase;
+}
+
+/* Category section */
+
+.container-box {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.container-box__title {
+	flex: 7;
+	font-size: 30px;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Inter', sans-serif;
+	font-weight: 600;
+}
+
+.container-box__text {
+	flex: 5;
+	padding-left: 20px;
+}
+
+.category-section__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 24px;
+}
+
+.category-section__item {
+	flex: 0 0 calc(33.33% - 16px);
+	margin-bottom: 16px;
+	transition: transform 0.5s ease;
+}
+
+.category-section__item:hover {
+	transform: scale(1.05);
+}
+
+.category-section__item a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.category-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 380px;
+	padding: 24px;
+	color: #fff;
+	background-image: linear-gradient(
+		180deg,
+		rgba(49, 38, 26, 0) 20.21%,
+		rgba(49, 38, 26, 0.71) 72.92%
+	);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.category-card__image {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.category-card__title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.category-card__text {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 16px;
+}
+
+/* Popup */
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.popup {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #fff;
+	padding: 48px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popup__btn-close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	fill: transparent;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.popup__form-field {
+	margin-bottom: 32px;
+}
+
+.popup__button {
+	margin: 0 auto 24px;
+}
+
+.popup__title {
+	max-width: 550px;
+	font-size: 38px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 40px;
+}
+
+.popup__form-field {
+	margin-bottom: 32px;
+	width: 100%;
+}
+
+.input__control,
+textarea {
+	padding-right: 10px;
+	padding-left: 10px;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	outline: none;
+	transition: border-bottom-color 0.3s;
+	resize: none;
+}
+
+.input__control:focus,
+textarea {
+	border-bottom-color: #000;
+}
+
+.input__control[type='email'],
+textarea {
+	width: 100%;
+	max-width: 400px;
+}
+
+.popup__form {
+	width: 100;
+	margin-left: -190px;
+}
+
+.popup__title::selection {
+	background-color: #e70000;
+	color: #fff;
+}
